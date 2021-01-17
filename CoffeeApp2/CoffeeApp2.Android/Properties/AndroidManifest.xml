@@ -13,7 +13,7 @@
     android:protectionLevel="signature"/>
   <uses-permission android:name="com.deg.blubcnmobl.droid.permission.MAPS_RECEIVE"/>
 	<application android:label="CoffeeApp2.Android" android:theme="@style/MainTheme">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDBtgPV5jkewdQLiRAMl-v55JQ2Hgk1rOw" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR GOOGLE MAPS API KEY" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
 	</application>	
