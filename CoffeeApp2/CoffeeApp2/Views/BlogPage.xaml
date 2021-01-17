@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeApp2.Views.BlogPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding newsList}" HasUnevenRows="true" ItemTapped="OnListViewItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="True"
+                                   Padding="0"
+                                   CornerRadius="20">
+                                <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="3*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="3*" />
+                                </Grid.ColumnDefinitions>
+                                    <Frame Padding="0"
+                                           Grid.RowSpan="2" 
+                                           CornerRadius="20">
+                                        <Image 
+                                               Source="{Binding ImageUrl}"
+                                               Aspect="AspectFill">
+                                        </Image>
+                                    </Frame>
+                                    <Label Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold" />
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding BriefContent}" VerticalOptions="End" />
+                            </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

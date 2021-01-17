@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="CoffeeApp2.Views.SearchPage">
+
+    <ContentPage.Resources>
+        
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never"
+                    HorizontalScrollBarVisibility="Never"
+                    Orientation="Neither"
+                    x:Name="ScrollS">
+            <Grid VerticalOptions="Fill" HorizontalOptions="Fill" Margin="100,50,100,50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout x:Name="FirstOption" Grid.Row="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <ImageButton x:Name="firstButton_first" 
+                         Grid.Row="0"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="first_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="secondButton_first" 
+                         Grid.Row="1"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="first_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="thirdButton_first" 
+                         Grid.Row="0"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="first_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="fourthButton_first" 
+                         Grid.Row="1"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="first_Clicked">
+
+                    </ImageButton>
+                </StackLayout>
+
+                <StackLayout x:Name="SecondOption" Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <ImageButton x:Name="firstButton_second" 
+                         Grid.Row="0"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="second_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="secondButton_second" 
+                         Grid.Row="1"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="second_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="thirdButton_second" 
+                         Grid.Row="0"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="second_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="fourthButton_second" 
+                         Grid.Row="1"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="second_Clicked">
+
+                    </ImageButton>
+                </StackLayout>
+
+                <StackLayout x:Name="ThirdOption" Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <ImageButton x:Name="firstButton_third" 
+                         Grid.Row="0"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="third_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="secondButton_third" 
+                         Grid.Row="1"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="third_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="thirdButton_third" 
+                         Grid.Row="0"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="third_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="fourthButton_third" 
+                         Grid.Row="1"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="third_Clicked">
+
+                    </ImageButton>
+                </StackLayout>
+
+                <StackLayout x:Name="FourthOption" Grid.Row="3" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <ImageButton x:Name="firstButton_fourth" 
+                         Grid.Row="0"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="fourth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="secondButton_fourth" 
+                         Grid.Row="1"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="fourth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="thirdButton_fourth" 
+                         Grid.Row="0"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="fourth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="fourthButton_fourth" 
+                         Grid.Row="1"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="fourth_Clicked">
+
+                    </ImageButton>
+                </StackLayout>
+
+                <StackLayout x:Name="FifthOption" Grid.Row="4" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <ImageButton x:Name="firstButton_fifth" 
+                         Grid.Row="0"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="fifth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="secondButton_fifth" 
+                         Grid.Row="1"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="fifth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="thirdButton_fifth" 
+                         Grid.Row="0"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="fifth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="fourthButton_fifth" 
+                         Grid.Row="1"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="fifth_Clicked">
+
+                    </ImageButton>
+                </StackLayout>
+
+                <StackLayout x:Name="SixthOption" Grid.Row="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <ImageButton x:Name="firstButton_sixth" 
+                         Grid.Row="0"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="sixth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="secondButton_sixth" 
+                         Grid.Row="1"
+                         Grid.Column="0" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="sixth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="thirdButton_sixth" 
+                         Grid.Row="0"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="sixth_Clicked">
+
+                    </ImageButton>
+                    <ImageButton x:Name="fourthButton_sixth" 
+                         Grid.Row="1"
+                         Grid.Column="1" 
+                         Aspect="AspectFill"
+                         Source="coffee.png" Clicked="sixth_Clicked">
+
+                    </ImageButton>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>        
+    
+</ContentPage>

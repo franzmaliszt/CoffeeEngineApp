@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="CoffeeApp2.Views.SearchPage"
+             
+             BackgroundImageSource="main_bckgrnd.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ImageButton x:Name="btnBack" 
+                     Source="back_arrow.png" 
+                     Clicked="btnBack_Clicked" 
+                     IsVisible="False" 
+                     HorizontalOptions="Start" 
+                     VerticalOptions="Center" 
+                     BackgroundColor="Transparent"/>
+
+
+
+            <ScrollView x:Name="scrollView" 
+                    Orientation="Horizontal" 
+                    HorizontalScrollBarVisibility="Never"  
+                    HorizontalOptions="End"
+                    IsEnabled="True">
+
+                <Grid x:Name="firstGrid"  Margin="10,0,0,0" VerticalOptions="Center"  HorizontalOptions="Center" ColumnSpacing="190">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="400"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="230"/>
+                        <ColumnDefinition Width="270"/>
+                        <ColumnDefinition Width="380"/>
+                    </Grid.ColumnDefinitions>
+                    <!--my welcome page-->
+                    <StackLayout x:Name="WelcomeLayout" Grid.RowSpan="4" Margin="70">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Here you can choose what's best for you"  
+                                   FontSize="32"
+                                   FontFamily="font1"
+                                   Grid.RowSpan="3"
+                                   HorizontalTextAlignment="Center"
+                                   HorizontalOptions="Center"/>
+                            <Button Text="Start" 
+                                    CornerRadius="25"
+                                    BackgroundColor="#A0522D"
+                                    Grid.Row="6"
+                                    Margin="50,0,75,0"
+                                    FontFamily="font1"
+                                    FontSize="22"
+                                    VerticalOptions="End"
+                                    
+                                    Clicked="btnStart_Clicked"/>
+                        </Grid>
+                    </StackLayout>
+                    <!--First Stage-->
+                    <StackLayout Grid.Column="1" Grid.RowSpan="4">
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Let's start with how dark you like your coffee" 
+                                   Grid.Row="0" FontFamily="font1" HorizontalTextAlignment="Center"
+                                   
+                                   
+                                   FontSize="29" />
+                            <ImageButton ClassId="Light"
+                               
+                                 Grid.Row="1"
+                                 Source="light_beans.jpg" 
+                                 Clicked="OnFirstClick"
+                                                                        
+                                 CornerRadius="25">
+
+                            </ImageButton>
+
+                            <ImageButton ClassId="Medium" 
+                               
+                                 Grid.Row="2"
+                                 Source="medium_beans.jpg" 
+                                 Clicked="OnFirstClick"
+                                 CornerRadius="25">
+
+                            </ImageButton>
+                            <ImageButton ClassId="Dark" 
+                                
+                                Grid.Row="3"
+                                Source="dark_beans.jpg" 
+                                Clicked="OnFirstClick"
+                                CornerRadius="25">
+
+                            </ImageButton>
+                        </Grid>
+                    </StackLayout>
+
+
+
+
+
+                    <!--Second Stage-->
+                    <StackLayout Grid.Column="2" Grid.RowSpan="4">
+                        <Label Text="What type of brewing you'd prefer?"
+                               HorizontalTextAlignment="Center" 
+                               FontSize="32" Grid.Column="2" 
+                               HorizontalOptions="Center"
+                               FontFamily="font1"
+                               Margin="0,0,30,0"/>
+                        <Grid WidthRequest="180"  >
+
+                            <Grid.RowDefinitions>
+
+                                <RowDefinition Height="170"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="170"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ImageButton ClassId="Mocha"
+                                        Grid.Row="0" Grid.Column="0"                                 
+                                        Source="mokapot1.png" 
+                                        Clicked="OnSecondClick"
+                                        Aspect="AspectFill"
+                                        CornerRadius="25"
+                                        BackgroundColor="Transparent">
+
+                            </ImageButton>
+                            <Label Text="Moka Pot" Grid.Row="1" Grid.Column="0" TextColor="#2b1d0e " FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton ClassId="Chemex"  Grid.Row="0" Grid.Column="1"
+                                        Aspect="AspectFill"
+                                        Source="chemex1.png" 
+                                        Clicked="OnSecondClick"
+                                        CornerRadius="25"
+                                        BackgroundColor="Transparent">
+
+                            </ImageButton>
+                            <Label Text="Chemex" Grid.Row="1" Grid.Column="1" TextColor="#2b1d0e" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton ClassId="French" Aspect="AspectFill"
+                                        Grid.Row="2" Grid.Column="0"
+                                        Source="frenchpress1.png" 
+                                        Clicked="OnSecondClick"
+                                        CornerRadius="25"
+                                        BackgroundColor="Transparent">
+
+                            </ImageButton>
+                            <Label Text="French Press" Grid.Column="0" Grid.Row="3" TextColor="#2b1d0e" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton ClassId="Cold"  Aspect="AspectFill"
+                                        Grid.Row="2" Grid.Column="1"
+                                        Source="coldbrew1.png" 
+                                        Clicked="OnSecondClick"
+                                        CornerRadius="25"
+                                        BackgroundColor="Transparent">
+
+                            </ImageButton>
+                            <Label Text="Cold Brew" Grid.Row="3" Grid.Column="1" TextColor="#2b1d0e" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </StackLayout>
+
+
+
+
+
+                    <!--Third Stage-->
+                    <StackLayout Grid.Column="3" Grid.RowSpan="4">
+                        <Label Text="Do you add anything to your coffee?" 
+                               HorizontalTextAlignment="Center" 
+                               FontFamily="font1" 
+                               Grid.Column="3"
+                               FontSize="32"
+                               />
+                        <Grid WidthRequest="180">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="170"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="170"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <ImageButton ClassId="Sugar"
+                                        Grid.Row="0" Grid.Column="0"
+                                        Aspect="AspectFill"
+                                        Source="sugar1.png" 
+                                        Clicked="OnThirdClick"
+                                        CornerRadius="25"
+                                        BackgroundColor="Transparent">
+
+                            </ImageButton>
+                            <Label Text="Sugar"  Grid.Row="1" Grid.Column="0" 
+                                   TextColor="#2b1d0e" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton ClassId="Milk"
+                                        Grid.Row="0" Grid.Column="1"
+                                        Aspect="AspectFill"
+                                        Source="milk_cream1.png" 
+                                        Clicked="OnThirdClick"
+                                        CornerRadius="25"
+                                        BackgroundColor="Transparent">
+
+                            </ImageButton>
+                            <Label Text="Milk or Cream" Grid.Row="1" Grid.Column="1" 
+                                   TextColor="#2b1d0e" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton ClassId="Syrup"
+                                        Grid.Row="2" Grid.Column="0"
+                                        Aspect="AspectFill"
+                                        Source="syrups1.png" 
+                                        Clicked="OnThirdClick"
+                                        CornerRadius="25"
+                                        BackgroundColor="Transparent">
+                            </ImageButton>
+                            <Label Text="Syrups or Sweetener" Grid.Row="3" Grid.Column="0" 
+                                   TextColor="#2b1d0e" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton ClassId="Black"
+                                        Grid.Row="2" Grid.Column="1"
+                                        Aspect="AspectFill"
+                                        Source="black1.png" 
+                                        Clicked="OnThirdClick"
+                                        CornerRadius="25"
+                                        BackgroundColor="Transparent">
+
+                            </ImageButton>
+                            <Label Text="Black" Grid.Row="3" Grid.Column="1" 
+                                   TextColor="#2b1d0e" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                        </Grid>
+
+                    </StackLayout>
+
+                    <!--Fourth Stage-->
+
+                    <Label Text="Finally, would you like something exciting or basic?"
+                               FontFamily="font1"
+                               FontSize="32"
+                               HorizontalTextAlignment="Center" 
+                               Margin="0,20,10,0"
+                               Grid.Column="4"/>
+
+                    <Frame CornerRadius="20" 
+                           Grid.Column="4" Grid.Row="1" 
+                           Margin="0,0,20,0" 
+                           Padding="0" 
+                           BorderColor="#9f6b34" 
+                           Background="Transparent"
+                           x:Name="classicFrame">
+                        <Label Text="CLASSIC AND TRADITIONAL"
+                               ClassId="Classic"
+                               Padding="35" 
+                               FontSize="26"
+                               FontFamily="font1" 
+                               HorizontalTextAlignment="Center"
+                               TextColor="#211717">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFourthClick"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Frame>
+
+
+                    <Frame CornerRadius="20" 
+                           Grid.Column="4" Grid.Row="2" 
+                           Padding="0"
+                           Margin="0,0,20,0"  
+                           BorderColor="#9f6b34" 
+                           Background="Transparent">
+                        <Label Text="SURPRISING AND UNCONVENTIONAL"
+                               ClassId="Authentic"
+                                Padding="35" 
+                                FontSize="26"
+                                FontFamily="font1" 
+                                HorizontalTextAlignment="Center"
+                                HorizontalOptions="Center"    
+                                TextColor="#211717">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFourthClick"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Frame>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

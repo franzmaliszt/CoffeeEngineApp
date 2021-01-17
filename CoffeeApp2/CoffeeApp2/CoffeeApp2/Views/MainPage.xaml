@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeApp2.MainPage">
+   
+        <Grid BackgroundColor="#eed9c4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Margin="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image Source="coffee_cups.png" 
+                    HeightRequest="350"
+                   />
+                <Entry x:Name="usernameEntry" 
+                   Grid.Row="1" 
+                   Placeholder="Username" 
+                   PlaceholderColor="#353434"/>
+                <Entry x:Name="cityEntry" 
+                   Grid.Row="2" 
+                   Placeholder="City" 
+                   PlaceholderColor="#353434"/>
+                <Entry x:Name="passwordEntry" 
+                   Grid.Row="3" 
+                   Placeholder="Password"
+                   PlaceholderColor="#353434"
+                   IsPassword="True"/>
+                <Button Text="Login" 
+                    x:Name="loginBtn"
+                    BackgroundColor="#353434"
+                    TextColor="#eed9c4" 
+                    HeightRequest="50"
+                    BorderRadius="20" 
+                    VerticalOptions="Start" 
+                    Grid.Row="4"
+                    Clicked="loginBtn_Clicked"
+                    Margin="65,0,65,0"/>
+                <Label Text="No accounts? Sign up here!"
+                   TextColor="#353434"
+                   VerticalOptions="FillAndExpand"
+                   Grid.Row="5"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="Center"/>
+            </Grid>
+            <Grid Grid.Row="1" Margin="0,400,0,0">
+                <Image Source="coffee_beans.jpg" />
+            </Grid>
+            
+
+
+        </Grid>
+       
+    
+    
+
+</ContentPage>

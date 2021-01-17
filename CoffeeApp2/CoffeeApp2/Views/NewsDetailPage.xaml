@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeApp2.Views.NewsDetailPage"
+             Title="News Detail"
+             BackgroundColor="#faf0e6">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <ScrollView x:Name="newsDetailScroll" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout
+                    HorizontalOptions="Center"
+                    Spacing="6"
+                    VerticalOptions="Center">
+                    
+
+                    <!--  Product image  -->
+                    <Frame CornerRadius="30"  Padding="0" Margin="5,0,5,0" >
+                        <Image x:Name="NewsImage" Aspect="AspectFill" HeightRequest="220" WidthRequest="124"/>
+                    </Frame>
+                    
+
+                    <!--  Product title  -->
+                    <Frame HasShadow="True"  BorderColor="#564A3E" BackgroundColor="#fff0db" Margin="5,0,5,0" Padding="5" CornerRadius="20">
+                        <Label x:Name="TitleLabel"
+                        HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           FontFamily="font1"
+                           FontSize="17"
+                           TextColor="Black" Margin="0,5,0,5"/>
+                    </Frame>
+                    
+                    <!--  Product description  -->
+                    <Frame HasShadow="True" BorderColor="Wheat" BackgroundColor="#fff0db" Margin="5,0,5,0" Padding="5" CornerRadius="20">
+                        <Label x:Name="ContentLabel"
+                        Margin="15,0,15,0"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Start"
+                           FontSize="15"
+                           TextColor="Black"/>
+                    </Frame>
+                    
+                    
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

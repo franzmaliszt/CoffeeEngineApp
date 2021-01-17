@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="CoffeeApp2.Views.CoffeeShopDetail">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Image x:Name="ItemImage" HeightRequest="270" VerticalOptions="StartAndExpand" Aspect="AspectFill"/>
+                <Frame Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,-50,20,0" Padding="18" HeightRequest="220" VerticalOptions="StartAndExpand">
+                    
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <StackLayout Orientation="Vertical" Spacing="6" HorizontalOptions="CenterAndExpand">
+                            <Label x:Name="ItemName" FontSize="20" FontAttributes="Bold" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+                            <Label x:Name="ItemWebsite" FontSize="12" TextColor="#2C3E50" HorizontalOptions="CenterAndExpand"/>
+                            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="CenterAndExpand">
+                                <Image Source="location.png" WidthRequest="10" HeightRequest="15" VerticalOptions="Center"/>
+                                <Label x:Name="ItemAddress" TextColor="#34495E" FontSize="14" FontAttributes="Bold" VerticalOptions="Center" />
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <StackLayout x:Name="WifiIcon" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                                <Image Source="wifi.png" WidthRequest="45" HeightRequest="45" HorizontalOptions="Center"/>
+                                <Label Text="Wifi" TextColor="#2C3E50" FontSize="12" HorizontalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout x:Name="TakeawayIcon" Grid.Column="1" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                                <Image Source="takeaway.png" WidthRequest="45" HeightRequest="45" HorizontalOptions="Center"/>
+                                <Label Text="Takeaway" TextColor="#2C3E50" FontSize="12" HorizontalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout x:Name="FoodIcon" Grid.Column="2" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                                <Image Source="sandwich.png" WidthRequest="45" HeightRequest="45" HorizontalOptions="Center"/>
+                                <Label Text="Food" TextColor="#2C3E50" FontSize="12" HorizontalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout x:Name="AwardIcon" Grid.Column="3" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                                <Image Source="award.png" WidthRequest="45" HeightRequest="45" HorizontalOptions="Center"/>
+                                <Label Text="Awarded" TextColor="#2C3E50" FontSize="12" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
